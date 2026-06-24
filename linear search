@@ -1,0 +1,23 @@
+# Linear Search in Python
+
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Return the index if found
+    return -1  # Return -1 if not found
+
+
+# Input list from user
+arr = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+# Input target element
+target = int(input("Enter the number to search: "))
+
+# Perform linear search
+result = linear_search(arr, target)
+
+# Display result
+if result != -1:
+    print(f"Element found at index {result}")
+else:
+    print("Element not found")
